@@ -1,3 +1,6 @@
+# Copyright 2026 Anlatan Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 # The extension module; the package metadata is in pyproject.toml.
 import glob
 

@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Allocation with a cache of large blocks.
  *
  * Large buffers freed through a wll_mem are kept and handed out again by

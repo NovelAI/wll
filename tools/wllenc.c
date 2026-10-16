@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* wllenc: encode an RGBA PAM file as lossless WebP. */
 #define _POSIX_C_SOURCE 199309L
 #include <stdio.h>

@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* memuse: peak memory of one encode or decode, wll against libwebp.
  *
  * Usage: memuse MODE file

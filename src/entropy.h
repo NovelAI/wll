@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Entropy estimates used to steer encoder decisions. */
 #ifndef WLL_ENTROPY_H
 #define WLL_ENTROPY_H

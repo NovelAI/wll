@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Prefix (Huffman) codes for the VP8L bitstream. */
 #ifndef WLL_HUFFMAN_H
 #define WLL_HUFFMAN_H

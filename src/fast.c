@@ -1,3 +1,7 @@
+/* Copyright 2026 Anlatan Inc.
+ * Parts derived from libwebp, Copyright (c) 2010, Google Inc. (see NOTICE).
+ * SPDX-License-Identifier: Apache-2.0 AND BSD-3-Clause */
+
 /* Fast encoding mode.
  *
  * Fixed choices instead of searches: subtract green, predictor mode 11

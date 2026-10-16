@@ -1,3 +1,7 @@
+/* Copyright 2026 Anlatan Inc.
+ * Parts derived from libwebp, Copyright (c) 2010, Google Inc. (see NOTICE).
+ * SPDX-License-Identifier: Apache-2.0 AND BSD-3-Clause */
+
 /* Lossless WebP (VP8L) decoder: all lossless features (the four
  * transforms, meta prefix codes, LZ77 copies and color caches), in simple
  * or extended (VP8X) files. Lossy and animated files are rejected as

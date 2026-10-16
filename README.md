@@ -379,3 +379,8 @@ Tools:
 - `build/fuzz-decode corpus_dir`: libFuzzer target (clang) for the decoder.
 - `build/fuzz-encode corpus_dir`: libFuzzer target for the encoder, round
   trips of arbitrary pixels at both levels through wll and libwebp.
+
+## License
+
+Apache License 2.0 (`LICENSE`). Parts of the encoder and decoder are
+derived from libwebp, under its BSD license; see `NOTICE`.

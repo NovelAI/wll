@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* CPython extension module wll._wll: the encoder and decoder on
  * buffer-protocol pixels.
  *

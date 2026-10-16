@@ -1,3 +1,6 @@
+// Copyright 2026 Anlatan Inc.
+// SPDX-License-Identifier: Apache-2.0
+
 // bench_png_decode: decoding speed of PNG decoders (libpng, libspng, Wuffs,
 // fpng) and WebP decoders (libwebp, wll) on the same RGBA PAM images.
 //

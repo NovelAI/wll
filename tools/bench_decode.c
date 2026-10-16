@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* bench_decode: decoding speed of WebP files, libwebp against wll.
  *
  * Usage: bench_decode [-r rounds] file.webp...

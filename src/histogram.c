@@ -1,3 +1,7 @@
+/* Copyright 2026 Anlatan Inc.
+ * Parts derived from libwebp, Copyright (c) 2010, Google Inc. (see NOTICE).
+ * SPDX-License-Identifier: Apache-2.0 AND BSD-3-Clause */
+
 #include "histogram.h"
 
 #include <math.h>

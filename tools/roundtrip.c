@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* roundtrip: encode with wll, decode with libwebp, require identical RGBA.
  *
  * Without arguments, runs a set of synthetic images at both levels. With PAM

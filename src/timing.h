@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Optional per-stage timing (build with -DWLL_TIMING). */
 #ifndef WLL_TIMING_H
 #define WLL_TIMING_H

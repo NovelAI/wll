@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* libFuzzer target for the encoder (build: make build/fuzz-encode, clang).
  *
  * The input picks the size, level and row padding and gives the pixels,

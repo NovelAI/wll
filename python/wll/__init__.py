@@ -1,3 +1,6 @@
+# Copyright 2026 Anlatan Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 """Exact lossless WebP encoding and decoding of RGBA images.
 
 All four channels are kept exactly, including the RGB values of fully

@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* VP8L transforms: subtract green, predictor, cross color. */
 #ifndef WLL_TRANSFORMS_H
 #define WLL_TRANSFORMS_H

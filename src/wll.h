@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* wll: WebP lossless encoder.
  *
  * Encodes 8-bit RGBA as a lossless WebP (VP8L) file. All four channels are

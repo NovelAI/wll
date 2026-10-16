@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Minimal reader for RGBA PAM files (as written by `dwebp -pam`). */
 #ifndef WLL_TOOLS_PAM_H
 #define WLL_TOOLS_PAM_H

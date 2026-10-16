@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* libFuzzer target for the decoder (build: make build/fuzz-decode, clang).
  *
  * Any input must decode without memory errors. Against libwebp:

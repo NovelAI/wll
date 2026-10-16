@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Anlatan Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 """Compare VP8L payload sizes and encode times of `cwebp -lossless -exact -z N`
 against a directory of lossless WebP files.
 

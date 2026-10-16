@@ -1,4 +1,4 @@
-include README.md
+include README.md LICENSE NOTICE
 include python/_wll.c
 recursive-include src *.c *.h
 recursive-include python/tests *.py

@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Shared internal definitions of the encoder. */
 #ifndef WLL_INTERNAL_H
 #define WLL_INTERNAL_H

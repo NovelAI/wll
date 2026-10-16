@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* Fast encoding mode. */
 #ifndef WLL_FAST_H
 #define WLL_FAST_H

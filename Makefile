@@ -1,3 +1,6 @@
+# Copyright 2026 Anlatan Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 CC = cc
 OPT = -O3 -g
 CFLAGS = $(OPT) -std=c11 -Wall -Wextra -Wshadow -Isrc -pthread

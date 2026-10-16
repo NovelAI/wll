@@ -1,3 +1,6 @@
+/* Copyright 2026 Anlatan Inc.
+ * SPDX-License-Identifier: Apache-2.0 */
+
 /* LSB-first bit writer, as used by the VP8L bitstream. */
 #ifndef WLL_BITWRITER_H
 #define WLL_BITWRITER_H

@@ -1,3 +1,6 @@
+// Copyright 2026 Anlatan Inc.
+// SPDX-License-Identifier: Apache-2.0
+
 // bench_png: compare wll against PNG encoders (libpng, fpnge, fpng) on RGBA
 // PAM files. Every encoder runs in-process and single-threaded on the same
 // pixels; the table lists output size and encoding speed.

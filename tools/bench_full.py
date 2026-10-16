@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Anlatan Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 """Size comparison over a directory of images, in parallel.
 
 For every API WebP in --src: decode it to PAM, encode the PAM with
