@@ -75,6 +75,55 @@ Same 200-image subset and machine (`build/bench-png`):
 | fpng | 15.053 | 171.0% | 184.24 |
 | fpng slower | 14.090 | 160.1% | 114.13 |
 
+### Compared with other WebP encoders
+
+Lossless WebP encoders on public images from
+[codec-corpus](https://github.com/imazen/codec-corpus), all opaque:
+
+- photo: CLIC 2025, 62 images, 174.9 MP.
+- photo512: CID22-512, 250 images, 65.5 MP. Mostly photos, a few charts.
+- screenshot: the QOI benchmark's `screenshot_web` set, 13 images, 86.6 MP.
+
+Each encoder ran on one pinned core of a KVM virtual machine with a Cascade
+Lake Xeon (model and clock speed unknown), with all images loaded first and
+the fastest of 2–5 runs kept. A repeat of the photo set for six of the
+encoders gave speeds within 5%. Cascade Lake is older than the machine
+above, so compare the speeds within this table rather than with the other
+tables. libwebp 1.6.0 and zenwebp ran with `exact`; deepteams/webp with
+`Exact`. libwebp 1.6.0 decoded every output except one (†), and each
+matched its source byte for byte. oxideav-webp 0.3.1 and webpkit's default level are
+not listed because some of their files did not decode in a 20-image trial.
+Sizes are relative to libwebp `-z 2`, per set and over all 325 images:
+
+| encoder | photo | photo512 | screenshot | all bpp | all | MP/s |
+|---|---|---|---|---|---|---|
+| wll fast | 110.7% | 113.7% | 124.8% | 7.111 | 112.4% | 167.93 |
+| image-webp 0.2.4 | 118.1% | 122.7% | 133.9% | 7.613 | 120.4% | 103.02 |
+| libwebp -z 0 | 107.9% | 111.3% | 175.1% | 7.151 | 113.1% | 23.06 |
+| webpkit 0.1.0 (fast) | 226.1% | 206.5% | 554.7% | 15.287 | 241.7% | 18.20 |
+| deepteams/webp 1.2.8 -z 0 | 210.1% | 209.0% | 249.8% | 13.430 | 212.3% | 15.24 |
+| deepteams/webp 1.2.8 -z 1 | 143.2% | 135.6% | 168.1% | 9.029 | 142.7% | 10.48 |
+| wll | 99.6% | 100.1% | 100.8% | 6.312 | 99.8% | 9.54 |
+| libwebp -z 1 | 100.9% | 103.2% | 103.2% | 6.432 | 101.7% | 5.84 |
+| deepteams/webp 1.2.8 -z 2 | 105.5% | 107.3% | 109.5% | 6.719 | 106.2% | 5.32 |
+| zenwebp 0.4.4 -z 0 † | 101.8% | 104.6% | 104.4% | 6.497 | 102.7% | 4.76 |
+| libwebp -z 2 | 100.0% | 100.0% | 100.0% | 6.325 | 100.0% | 4.18 |
+| zenwebp 0.4.4 -z 1 | 100.9% | 103.3% | 103.5% | 6.435 | 101.7% | 4.10 |
+| zenwebp 0.4.4 -z 2 | 100.1% | 100.0% | 100.1% | 6.330 | 100.1% | 3.04 |
+| nativewebp 1.3.0 | 110.2% | 109.8% | 107.2% | 6.953 | 109.9% | 1.49 |
+
+† One of zenwebp `-z 0`'s files is invalid: libwebp and wll both reject it.
+
+On these images, the default level makes files as small as `-z 2` and is 2.3x
+faster. The fast level is the fastest encoder measured, and its files are
+about the size of `-z 0`'s (smaller on screenshots) at 7x the speed. Per
+image, the default level is within +7.3% of `-z 2` (median +0.1%). The
+fast level's worst images are flat graphics and screenshots (+69% to
++178%, under 1.1 bpp with `-z 2`), for the same reason as above.
+
+Since every image is opaque, this comparison does not show whether an
+encoder keeps the RGB values of transparent pixels.
+
 ### Decoding
 
 Single-thread decode speed into a preallocated RGBA buffer, same machine,
