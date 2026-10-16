@@ -345,6 +345,34 @@ Encoding:
 
 Tests: `pip install .[test]` and `pytest python/tests`.
 
+## Go
+
+```sh
+go get github.com/novelai/wll/go   # needs cgo and GCC or Clang
+```
+
+```go
+import "github.com/novelai/wll/go" // package wll
+
+// pix holds non-premultiplied RGBA, rows stride bytes apart.
+data, err := wll.Encode(pix, width, height, stride, wll.LevelDefault)
+```
+
+- `wll.LevelFast` and `wll.LevelDefault` are the two levels.
+- Each call creates and frees its own encoder, so no memory stays allocated
+  between calls. `Encode` is safe to call from many goroutines; each call
+  runs on one thread.
+- The buffer length, stride and dimensions are checked before C reads the
+  pixels; `Encode` returns an error instead.
+- The result is a Go byte slice holding the complete .webp file.
+- The decoder is not bound yet.
+- The binding is in `go/`. Its `cgo_*.c` files compile `src/*.c` into the
+  package, since cgo only builds C files in the package directory.
+  `make go-stubs` regenerates them after a source file is added or removed.
+  `go.mod` is at the root so that the module includes `src/`.
+
+Tests: `go test ./go` (also with `-race`).
+
 ## Building and testing
 
 ```sh
