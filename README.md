@@ -348,11 +348,11 @@ Tests: `pip install .[test]` and `pytest python/tests`.
 ## Go
 
 ```sh
-go get github.com/novelai/wll   # needs cgo and GCC or Clang
+go get github.com/novelai/wll/go   # needs cgo and GCC or Clang
 ```
 
 ```go
-import "github.com/novelai/wll"
+import "github.com/novelai/wll/go" // package wll
 
 // pix holds non-premultiplied RGBA, rows stride bytes apart.
 data, err := wll.Encode(pix, width, height, stride, wll.LevelDefault)
@@ -366,11 +366,12 @@ data, err := wll.Encode(pix, width, height, stride, wll.LevelDefault)
   pixels; `Encode` returns an error instead.
 - The result is a Go byte slice holding the complete .webp file.
 - The decoder is not bound yet.
-- The `cgo_*.c` files at the root compile `src/*.c` into the package, since
-  cgo only builds C files in the package directory. `make go-stubs`
-  regenerates them after a source file is added or removed.
+- The binding is in `go/`. Its `cgo_*.c` files compile `src/*.c` into the
+  package, since cgo only builds C files in the package directory.
+  `make go-stubs` regenerates them after a source file is added or removed.
+  `go.mod` is at the root so that the module includes `src/`.
 
-Tests: `go test .` (also with `-race`).
+Tests: `go test ./go` (also with `-race`).
 
 ## Building and testing
 

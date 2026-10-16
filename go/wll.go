@@ -1,12 +1,12 @@
 // Package wll is the Go binding of wll, a lossless WebP (VP8L) encoder that
-// keeps RGBA exactly, including RGB under alpha=0. The C sources in src/ are
-// compiled into the package through the cgo_*.c files.
+// keeps RGBA exactly, including RGB under alpha=0. The C sources in ../src
+// are compiled into the package through the cgo_*.c files.
 package wll
 
 /*
 #cgo CFLAGS: -O3 -std=c11
 #cgo linux LDFLAGS: -lm -pthread
-#include "src/wll.h"
+#include "../src/wll.h"
 */
 import "C"
 
