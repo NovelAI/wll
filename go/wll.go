@@ -1,3 +1,6 @@
+// Copyright 2026 Anlatan Inc.
+// SPDX-License-Identifier: Apache-2.0
+
 // Package wll is the Go binding of wll, a lossless WebP (VP8L) encoder that
 // keeps RGBA exactly, including RGB under alpha=0. The C sources in ../src
 // are compiled into the package through the cgo_*.c files.
